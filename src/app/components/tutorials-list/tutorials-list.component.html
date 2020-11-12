@@ -30,7 +30,7 @@
           {{ tutorial.title }}
         </li>
       </ul>
-  
+
       <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
         Remove All
       </button>
@@ -49,12 +49,12 @@
           <label><strong>Status:</strong></label>
           {{ currentTutorial.published ? "Published" : "Pending" }}
         </div>
-  
+
         <a class="badge badge-warning" href="/tutorials/{{ currentTutorial.id }}">
           Edit
         </a>
       </div>
-  
+
       <div *ngIf="!currentTutorial">
         <br />
         <p>Please click on a Tutorial...</p>

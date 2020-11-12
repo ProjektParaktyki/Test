@@ -60,7 +60,8 @@ export class TutorialDetailsComponent implements OnInit {
         },
         error => {
           console.log(error);
-        });
+        }
+      );
   }
 
   deleteTutorial() {

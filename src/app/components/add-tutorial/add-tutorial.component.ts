@@ -16,6 +16,7 @@ export class AddTutorialComponent implements OnInit {
 
   constructor(private tutorialService: TutorialService) { }
 
+  // tslint:disable-next-line: typedef
   ngOnInit() {
   }
 
