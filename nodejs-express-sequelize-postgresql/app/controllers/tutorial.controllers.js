@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require('../models');
 const Tutorial = db.tutorials;
 const Op = db.Sequelize.Op;
 
@@ -6,7 +6,7 @@ const Op = db.Sequelize.Op;
 exports.create = (req, res) => {
   if (!req.body.title) {
     res.status(400).send({
-      message: "Content can not be empty!"
+      message: 'Content can not be empty!'
     });
     return;
 };
@@ -25,7 +25,7 @@ Tutorial.create(tutorial)
   .catch(err => {
     res.status(500).send({
       message:
-        err.message || "Some error occurred while creating the Tutorial."
+        err.message || 'Some error occurred while creating the Tutorial.'
     });
   });
 };
@@ -42,7 +42,7 @@ exports.findAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || 'Some error occurred while retrieving tutorials.'
       });
     });
 };
@@ -57,7 +57,7 @@ exports.findOne = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Error retrieving Tutorial with id=" + id
+        message: 'Error retrieving Tutorial with id=' + id
       });
     });
 };
@@ -72,7 +72,7 @@ exports.update = (req, res) => {
     .then(num => {
       if (num == 1) {
         res.send({
-          message: "Tutorial was updated successfully."
+          message: 'Tutorial was updated successfully.'
         });
       } else {
         res.send({
@@ -82,7 +82,7 @@ exports.update = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Error updating Tutorial with id=" + id
+        message: 'Error updating Tutorial with id=' + id
       });
     });
 };
@@ -97,7 +97,7 @@ exports.delete = (req, res) => {
     .then(num => {
       if (num == 1) {
         res.send({
-          message: "Tutorial was deleted successfully!"
+          message: 'Tutorial was deleted successfully!'
         });
       } else {
         res.send({
@@ -107,7 +107,7 @@ exports.delete = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Could not delete Tutorial with id=" + id
+        message: 'Could not delete Tutorial with id=' + id
       });
     });
 };
@@ -124,7 +124,7 @@ exports.deleteAll = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while removing all tutorials."
+          err.message || 'Some error occurred while removing all tutorials.'
       });
     });
 };
@@ -138,7 +138,7 @@ exports.findAllPublished = (req, res) => {
     .catch(err => {
       res.status(500).send({
         message:
-          err.message || "Some error occurred while retrieving tutorials."
+          err.message || 'Some error occurred while retrieving tutorials.'
       });
     });
 };
