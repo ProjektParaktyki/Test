@@ -1,17 +1,40 @@
-<div>
-  <nav class="navbar navbar-expand navbar-dark bg-dark">
-    <a href="#" class="navbar-brand">bezKoder</a>
-    <div class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a routerLink="tutorials" class="nav-link">Tutorials</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="add" class="nav-link">Add</a>
-      </li>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+</head>
+<body>
+  <header>
+    <a href="/logowanie/app.component.html"class="link">Zaloguj</a>
+  </header>
+ <div class="main"> 
+<nav class="sidebar">
+  <div class="text"> Side menu</div>
+  <div>
+    
+    <nav class="navbar-expand">
+      <div class="navbar">
+        <li class="item">
+          <a routerLink="tutorials" class="link">Tutorials</a>
+        </li>
+        <li class="item">
+          <a routerLink="add" class="link">Add</a>
+        </li>
+      </div>
+    </nav>
+    <div class="container">
+      <router-outlet></router-outlet>
     </div>
-  </nav>
-
-  <div class="container mt-3">
-    <router-outlet></router-outlet>
   </div>
+</nav>
 </div>
+<script>
+  $('feat')
+</script>
+
+</body>
+</html>
