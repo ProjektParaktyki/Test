@@ -1,40 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <div class="box">
   
-</head>
-<body>
-  <header>
-    <a href="/logowanie/app.component.html"class="link">Zaloguj</a>
-  </header>
- <div class="main"> 
-<nav class="sidebar">
-  <div class="text"> Side menu</div>
-  <div>
+    <h2>Logowanie</h2>
     
-    <nav class="navbar-expand">
-      <div class="navbar">
-        <li class="item">
-          <a routerLink="tutorials" class="link">Tutorials</a>
-        </li>
-        <li class="item">
-          <a routerLink="add" class="link">Add</a>
-        </li>
+    <form action="">
+      <div class="login-form">
+        
+        <label for="username">Email</label>
+        <input type="text" name="email" id="email" placeholder="email" [(ngModel)]="email">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="hasło" [(ngModel)]="password">
+        
       </div>
-    </nav>
-    <div class="container">
-      <router-outlet></router-outlet>
-    </div>
+      <input (click)="loguj()" id="submit" type="submit" value="Zaloguj" class="btn solid">
+    </form>
   </div>
-</nav>
-</div>
-<script>
-  $('feat')
-</script>
-
-</body>
-</html>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Projekt2';
-}
+  email = "";
+  password = "";
+  title = '';
 
+  constructor(private auth:AuthService)
+  {
+
+  }
+
+  loguj()
+  {
+    this.auth.login(this.email, this.password).subscribe((e:Response) => {
+      
+      this.auth.getUser().subscribe( x => {
+        console.log(x);
+      })
+    });
+  }
+}
